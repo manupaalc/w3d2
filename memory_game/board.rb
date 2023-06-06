@@ -37,6 +37,16 @@ class Board
             @board[random_position_2[0]][random_position_2[1]] = Card.new(temp)
         end
     end
+    def render
+        print "  "
+        @board.each_with_index {|ele, i| print i.to_s + " "}
+        puts "\n"
+        @board.each_with_index do |row, i| 
+            puts i.to_s + " " + row.join(" ")
+        end
+
+    end
+
 
     
 end
